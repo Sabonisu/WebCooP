@@ -14,6 +14,23 @@ let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
 let cart = [];
 
+let totalCostSpan = document.querySelector('.num'); // Доданий елемент для відображення загальної вартості
+const calculateTotalCost = () => {
+    let totalCost = 0;
+    cart.forEach(item => {
+      let positionProduct = products.findIndex((value) => value.id == item.product_id);
+      let info = products[positionProduct];
+      totalCost += info.price * item.quantity;
+    });
+    if (totalCostSpan) {
+      totalCostSpan.innerText = `$${totalCost.toFixed(2)}`;
+    }
+    console.log(`Total cost: $${totalCost.toFixed(2)}`);
+  }
+  
+
+
+
 listCartHTML.addEventListener('click', (event) => {
   let positionClick = event.target;
   if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
@@ -82,6 +99,7 @@ const addCartToHTML = () => {
   if(iconCartSpan) {
     iconCartSpan.innerText = totalQuantity;
   }
+  calculateTotalCost();
 }
 const changeQuantityCart = (product_id, type) => {
   let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
