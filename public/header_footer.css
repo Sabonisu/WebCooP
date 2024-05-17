@@ -110,9 +110,10 @@ span {
 }
 
 .prof_menu {
+    font-size: 1.5rem;
     position: absolute;
-    width: 10rem;
-    background-color: var(--green-color);
+    width: 20rem;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

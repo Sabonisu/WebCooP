@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkOut.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Responsive Fruits And Vegetables Website</title>
+    <!-- Navbar-->
+    <header class="header">
+        <a href="#home" class="logo">
+            Coffee<span>BAR</span>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="homeNav" id="">Home</a></li>
+            <a href="#about" class="aboutNav" id="">About Us</a></li>
+            <a href="#menu" class="productsNav" id="">Menu</a></li>
+            <a href="#reviews" class="reviewsNav" id="">Reviews</a></li>
+            <a href="#contacts" class="contactsNav" id="">Contacts</a></li>
+        </nav>
+
+        <!--Profile-->
+        <div class="profile2">
+            <img src="img/profile.jpg" alt="">
+            <span>moorminsu</span>
+            <i class='bx bx-caret-down'></i>
+            <div class="prof_menu">
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li class="profCart">Cart</li>
+                    <li class="logOutBtn">Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="profile1" onclick="toLogIn()">
+            <img src="img/user_ico.jpg" alt="">
+            <span>Login</span>
+            <i class='bx bx-caret-down'></i>
+        </div>
+        <script src="header.js"></script>
+    </header>
+</head>
+
+<body>
+
+    <div class="mainC">
+        <div class="grid-container">
+            <div class="checkout-info">
+                <!-- Ввід данних для підтвердження замовлення -->
+                <div class="line1">
+                    <div class="input">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="FirstName" name="FirstName"
+                                id='FirstName' required />
+                            <label for="FirstName" class="form__label">First Name</label>
+                        </div>
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="SecondName" name="SecondName"
+                                id='SecondName' required />
+                            <label for="SecondName" class="form__label">Second Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="line2">
+                    <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="City" name="City" id='City' required />
+                        <label for="City" class="form__label">City</label>
+                    </div>
+                </div>
+                <div class="line3">
+                    <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="HomeAddress" name="HomeAddress"
+                            id='HomeAddress' required />
+                        <label for="HomeAddress" class="form__label">Home Address</label>
+                    </div>
+                </div>
+                <div class="line4">
+                    <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Phone" name="Phone" id='Phone' required />
+                        <label for="Phone" class="form__label">Phone</label>
+                    </div>
+                </div>
+                <div class="5line">
+                    <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Email" name="Email" id='Email' required />
+                        <label for="Email" class="form__label">Email</label>
+                    </div>
+                </div>
+                <div class="6line">
+                    <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="AdditionalInformation"
+                            name="AdditionalInformation" id='AdditionalInformation' required />
+                        <label for="AdditionalInformation" class="form__label">Additional Information</label>
+                    </div>
+                </div>
+            </div>
+            <div class="divborder"></div>
+            <div class="cart-info"> <!-- початок кошика -->
+                <div class="cart">
+                    <h1>Your Items</h1>
+                    <div class="listCart">    
+                        <!-- список -->  
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/c3.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="trashIcon"><i class='bx bxs-trash bx-tada   ' ></i></div>
+                                </div>
+                            </div>
+                            <div class="name">
+                                Name
+                            </div>
+                            <div class="itemPrice">
+                                200 ₴
+                            </div>
+                        </div>      
+                    </div>
+                    <!-- список -->
+                    <div class="totalPrice">
+                        <span>Total</span><span class="totalprice ">200 ₴</span>
+                    </div>
+                    <div class="btnCheck">
+                        <button class="check">Check out</button>
+                    </div>
+                </div> <!-- кінець кошика -->
+            </div>
+        </div>
+        <!--Footer-->
+        <footer class="footer">
+            <div class="social">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-pinterest'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                CoffeeBAR | All Rights Reserved
+            </p>
+        </footer>
+    </div>
+
+    <!--Link To JS-->
+    <script src="checkOut.js"></script>
+    <script src="header.js"></script>
+
+</body>
+
+</html>

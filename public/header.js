@@ -1,57 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Отримуємо посилання на елемент хедера
+    // Get the header element
     var header = document.querySelector('header');
 
-    // Перевіряємо, чи користувач увійшов, зчитуючи дані з localStorage
+    // Check if the user is logged in by reading from localStorage
     var isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    // Перевіряємо, чи користувач увійшов
+    // If the user is logged in
     if (isLoggedIn === 'true') {
-        // Додаємо клас "logged_in" до хедера
+        // Add the "logged_in" class to the header
         header.classList.add('logged_in');
     }
 });
 
-
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-let sections = document.querySelector('section');
-let navLinks = document.querySelector('header nav a');
-
-
-window.onscroll = () =>{
-    sections.forEach(sec =>{
-        let top = window.scrollY;
-        let offset = set.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top => offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ' ]').classList.add(active)
-            })
-        }
-    })
-}
-
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+let headerBody = document.querySelector('body');  // Renamed to headerBody
 
 function toLogIn() {
-    var customersPage = "login.html";
-    window.location.href = customersPage;
+    var contactsPage = "login.html";
+    window.location.href = contactsPage;
 }
 
 let logOutBtn = document.querySelector('.logOutBtn');
 logOutBtn.addEventListener('click', () => {
     localStorage.setItem('isLoggedIn', false);
     location.reload();
-
 });
-
 
 let profile2 = document.querySelector('.profile2');
 profile2.addEventListener('click', () => {
@@ -59,6 +31,51 @@ profile2.addEventListener('click', () => {
 });
 
 let profCartBtn = document.querySelector('.profCart');
-profCartBtn.addEventListener('click', () =>{
-    body.classList.toggle('showCart');
-})
+profCartBtn.addEventListener('click', () => {
+    headerBody.classList.toggle('showCart');
+});
+
+document.querySelector('.homeNav').addEventListener('click', (event) => {
+    event.preventDefault();
+    toHomePage();
+});
+
+document.querySelector('.aboutNav').addEventListener('click', (event) => {
+    event.preventDefault();
+    toAboutPage();
+});
+
+document.querySelector('.productsNav').addEventListener('click', (event) => {
+    event.preventDefault();
+    toProductsPage();
+});
+
+document.querySelector('.reviewsNav').addEventListener('click', (event) => {
+    event.preventDefault();
+    toReviewsPage();
+});
+
+document.querySelector('.contactsNav').addEventListener('click', (event) => {
+    event.preventDefault();
+    toContactsPage();
+});
+
+function toHomePage() {
+    window.location.href = "index.html#home";
+}
+
+function toAboutPage() {
+    window.location.href = "index.html#about";
+}
+
+function toProductsPage() {
+    window.location.href = "product_page.html";
+}
+
+function toReviewsPage() {
+    window.location.href = "index.html#reviews";
+}
+
+function toContactsPage() {
+    window.location.href = "index.html#contacts";
+}
