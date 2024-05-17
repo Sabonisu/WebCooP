@@ -18,6 +18,7 @@ let navbar = document.querySelector('.navbar');
 let sections = document.querySelector('section');
 let navLinks = document.querySelector('header nav a');
 
+
 window.onscroll = () =>{
     sections.forEach(sec =>{
         let top = window.scrollY;
@@ -44,6 +45,12 @@ function toLogIn() {
     window.location.href = customersPage;
 }
 
+let logOutBtn = document.querySelector('.logOutBtn');
+logOutBtn.addEventListener('click', () => {
+    localStorage.setItem('isLoggedIn', false);
+    location.reload();
+
+});
 
 
 let profile2 = document.querySelector('.profile2');
