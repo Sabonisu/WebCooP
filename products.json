@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "name":" Dish 1",
+        "price": 200,
+        "weight":250,
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 2,
+        "name":" Dish 2",
+        "price": 250,
+        "weight":250,
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 3,
+        "name":" Dish 3",
+        "price": 290,
+        "weight":250,
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 4,
+        "name":" Dish 4",
+        "price": 200,
+        "weight":250,
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 5,
+        "name":" Dish 5",
+        "price": 300,
+        "weight":250,
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 6,
+        "name":" Dish 6",
+        "price": 200,
+        "weight":250,
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 7,
+        "name":" Dish 7",
+        "price": 200,
+        "weight":250,
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 8,
+        "name":" Dish 8",
+        "price": 200,
+        "weight":250,
+        "image": "img/p1.jpg"
+    }
+
+]

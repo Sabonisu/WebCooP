@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=EB+Garamond:ital@1&family=Kalnia:wght@100..700&family=Poppins:wght@200;300;400;500;600;700;800&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #080808;
+    --text-color: white;
+    --main-color: #e4b381;
+}
+
+body{
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1)
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.profile1, .profile2{
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.profile1 img, .profile2 img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.profile1 span, .profile2 span{
+    font-size: 15px;
+    font-weight: 500;
+}
+.profile1{
+    display:flex;
+}
+.profile2{
+    display:none;
+}
+.logged_in .profile1 {
+    display: none;
+}
+.logged_in .profile2 {
+    display: flex;
+}
+
+.profile2 .prof_menu{
+    position:absolute;
+    top:100%;
+}
+
+.prof_menu {
+    position: absolute;
+    width: 10rem;
+    background-color: var(--green-color);
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none;
+}
+.show .prof_menu {
+    display:block;
+}
+.prof_menu li{
+    border-radius: 8px;
+}
+
+.prof_menu li:hover{
+    transition: padding-left .1s ease;
+}
+.prof_menu li:hover{
+    padding-left: 10px;
+    background-color: var(--light-green-color);
+    cursor: pointer;
+}
+
+
+
+.footer{
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    padding:40px 0;
+    background-color: var(--main-color);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width:42px;
+    height:42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    background-color: white;
+    color: var(--main-color);    
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid white;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top:50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>CoffeeSHOP</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="header_footer.css">
+
+
+        
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <header class="header">
+            <a href="#home" class="logo">
+                Coffee<span>BAR</span>
+            </a>
+
+            <i class="bx bx-menu" id="menu-icon"></i>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#menu">Menu</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contacts">Contacts</a>
+            </nav>
+
+            <!--Profile-->
+        <div class="profile2">
+            <img src="img/profile.jpg" alt="">
+            <span>moorminsu</span>
+            <i class='bx bx-caret-down'></i>
+            <div class="prof_menu">
+                <ul>
+                    <li>Елемент 1</li>
+                    <li>Елемент 2</li>
+                    <li>Елемент 3</li>
+                    <li class="profCart">Cart</li>
+                    <li class="logOutBtn">Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="profile1" onclick="toLogIn()">
+            <img src="img/user_ico.jpg" alt="">
+            <span>Login</span>
+            <i class='bx bx-caret-down'></i>
+        </div>
+        <script src="header.js"></script>
+        </header>
+    </head>
+    <body>
+        
+
+        <section class="home" id="home">
+
+            <div class="home-content">
+                <h3>Welcome to</h3>
+                <h1>Coffee<span>BAR</span></h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non justo velit. In velit tellus, rhoncus eget sapien non, dapibus vulputate risus. Aenean congue dictum lacus, sed auctor tortor blandit nec. Aenean est ex, pellentesque eu tincidunt quis, venenatis ut lectus. Praesent ac lectus tempor justo mattis sodales. Maecenas ut purus vitae lacus auctor laoreet. Vestibulum vitae finibus dui.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+        </section>
+        
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="heading">About<span>Us</span></h2>
+
+                <p>Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit. 
+                    Fusce non justo velit. 
+                    In velit tellus, rhoncus eget sapien non, 
+                    dapibus vulputate risus. 
+                    Aenean congue dictum lacus, 
+                    sed auctor tortor blandit nec. 
+                    Aenean est ex, pellentesque eu 
+                    tincidunt quis, venenatis ut lectus. 
+                    Praesent ac lectus tempor justo mattis 
+                    sodales. Maecenas ut purus vitae lacus 
+                    auctor laoreet. Vestibulum vitae finibus dui.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <section class="coffees" id="menu" id="coffees">
+            <h2 class="heading">Coffees</h2>
+            <div class="coffees-container">
+                <div class="coffees-box">
+                    <img src="assets/4.png" alt="">
+                    <div class="coffees-info">
+                        <h4>Coffee1</h4>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Fusce non justo velit. 
+                            In velit tellus, rhoncus eget sapien non, 
+                            dapibus vulputate risus. 
+                            Aenean congue dictum lacus, 
+                            sed auctor tortor blandit nec. 
+                            Aenean est ex, pellentesque eu 
+                            tincidunt quis, venenatis ut lectus. </p>
+                            <a href="#">
+                                <i class='bx bxs-coffee' ></i>
+                            </a>
+                        </div>
+                </div>
+
+                <div class="coffees-box">
+                    <img src="assets/2.png" alt="">
+                    <div class="coffees-info">
+                        <h4>Coffee2</h4>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Fusce non justo velit. 
+                            In velit tellus, rhoncus eget sapien non, 
+                            dapibus vulputate risus. 
+                            Aenean congue dictum lacus, 
+                            sed auctor tortor blandit nec. 
+                            Aenean est ex, pellentesque eu 
+                            tincidunt quis, venenatis ut lectus. </p>
+                            <a href="#">
+                                <i class='bx bxs-coffee' ></i>
+                            </a>
+                        </div>
+                </div>
+
+                <div class="coffees-box">
+                    <img src="assets/3.png" alt="">
+                    <div class="coffees-info">
+                        <h4>Coffee3</h4>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Fusce non justo velit. 
+                            In velit tellus, rhoncus eget sapien non, 
+                            dapibus vulputate risus. 
+                            Aenean congue dictum lacus, 
+                            sed auctor tortor blandit nec. 
+                            Aenean est ex, pellentesque eu 
+                            tincidunt quis, venenatis ut lectus. </p>
+                            <a href="#">
+                                <i class='bx bxs-coffee' ></i>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="coffees" id="coffees">
+            <h2 class="heading">Beers</h2>
+            <div class="coffees-container">
+                <div class="coffees-box">
+                    <img src="assets/b2.png" alt="">
+                    <div class="coffees-info">
+                        <h4>Beer1</h4>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Fusce non justo velit. 
+                            In velit tellus, rhoncus eget sapien non, 
+                            dapibus vulputate risus. 
+                            Aenean congue dictum lacus, 
+                            sed auctor tortor blandit nec. 
+                            Aenean est ex, pellentesquse eu 
+                            tincidunt quis, venenatis ut lectus. </p>
+                            <a href="#">
+                                <i class='bx bxs-beer' ></i>
+                            </a>
+                        </div>
+                </div>
+
+                <div class="coffees-box">
+                    <img src="assets/b2.png" alt="">
+                    <div class="coffees-info">
+                        <h4>Beer2</h4>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Fusce non justo velit. 
+                            In velit tellus, rhoncus eget sapien non, 
+                            dapibus vulputate risus. 
+                            Aenean congue dictum lacus, 
+                            sed auctor tortor blandit nec. 
+                            Aenean est ex, pellentesque eu 
+                            tincidunt quis, venenatis ut lectus. </p>
+                            <a href="#">
+                                <i class='bx bxs-beer' ></i>
+                            </a>
+                        </div>
+                </div>
+
+                <div class="coffees-box">
+                    <img src="assets/b2.png" alt="">
+                    <div class="coffees-info">
+                        <h4>Beer3</h4>
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Fusce non justo velit. 
+                            In velit tellus, rhoncus eget sapien non, 
+                            dapibus vulputate risus. 
+                            Aenean congue dictum lacus, 
+                            sed auctor tortor blandit nec. 
+                            Aenean est ex, pellentesque eu 
+                            tincidunt quis, venenatis ut lectus. </p>
+                            <a href="#">
+                                <i class='bx bxs-beer' ></i>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <h2 class="heading">Reviews</h2>
+            <div class="reviews-container">
+                <div class="reviews-box">
+                    <i class='bx bx-user-circle'></i>
+                    <h3>Review 1</h3>
+                    <p>Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. 
+                        Fusce non justo velit. 
+                        In velit tellus, rhoncus eget sapien non, 
+                        dapibus vulputate risus. 
+                        Aenean congue dictum lacus, 
+                        sed auctor tortor blandit nec. 
+                        Aenean est ex, pellentesque eu 
+                        tincidunt quis, venenatis ut lectus.</p>
+                        <a href="#" class="btn">Read More</a>
+                </div>
+
+                <div class="reviews-box">
+                    <i class='bx bx-user-circle'></i>
+                    <h3>Review 2</h3>
+                    <p>Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. 
+                        Fusce non justo velit. 
+                        In velit tellus, rhoncus eget sapien non, 
+                        dapibus vulputate risus. 
+                        Aenean congue dictum lacus, 
+                        sed auctor tortor blandit nec. 
+                        Aenean est ex, pellentesque eu 
+                        tincidunt quis, venenatis ut lectus.</p>
+                        <a href="#" class="btn">Read More</a>
+                </div>
+
+                <div class="reviews-box">
+                    <i class='bx bx-user-circle'></i>
+                    <h3>Review 3</h3>
+                    <p>Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. 
+                        Fusce non justo velit. 
+                        In velit tellus, rhoncus eget sapien non, 
+                        dapibus vulputate risus. 
+                        Aenean congue dictum lacus, 
+                        sed auctor tortor blandit nec. 
+                        Aenean est ex, pellentesque eu 
+                        tincidunt quis, venenatis ut lectus.</p>
+                        <a href="#" class="btn">Read More</a>
+                </div>
+
+                <div class="reviews-box">
+                    <i class='bx bx-user-circle'></i>
+                    <h3>Review 4</h3>
+                    <p>Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. 
+                        Fusce non justo velit. 
+                        In velit tellus, rhoncus eget sapien non, 
+                        dapibus vulputate risus. 
+                        Aenean congue dictum lacus, 
+                        sed auctor tortor blandit nec. 
+                        Aenean est ex, pellentesque eu 
+                        tincidunt quis, venenatis ut lectus.</p>
+                        <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contacts" id="contact">
+            
+            <h2 class="heading">Contact</h2>
+
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+
+        </section>
+
+        <footer class="footer">
+            <div class="social">
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                <a href="#"><i class='bx bxl-pinterest' ></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                CoffeeBAR | All Rights Reserved
+            </p>
+        </footer>
+
+        <script src="header.js"></script>
+
+    </body>
+</html>
