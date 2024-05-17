@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2? family=Poppins:width@300;400;500;600;700;800;900&display=swap");
-
 *{
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -7,13 +6,15 @@
     box-sizing: border-box;
 
 }
-:root{
-    --green-color: #3cb815;
+:root {
     --light-green-color: #c0eb7b;
     --orange-color: #ff7e00;
     --light-orange-color: #f75f1d;
-    --text-color: #1a2428;
-    --bg-color: #fff;
+    --bg-color: #080808;
+    --text-color: white;
+    --main-color: #e4b381;
+    --secondary-color: #ffac58;
+
 }
 
 body {
@@ -23,6 +24,8 @@ body {
     min-height: 100vh;
     background: #ffffff;
     flex-direction: column; /* Додайте цей рядок */
+    background: url(assets/background-2.jpg);
+    color: var(--main-color);
 }
 
 .wrapper {
@@ -31,13 +34,13 @@ body {
     margin-right: auto;
     margin-top: 100px;
     width: 420px;
-    background: #fff;
-    color: #3cb815;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+        color: #e4b381;
     border-radius: 10px;
     padding: 30px 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
-
 .footer {
     /* Додайте цей блок стилів для центрування */
     display: flex;
@@ -47,21 +50,20 @@ body {
 
 
 .wrapper a{
-    color: #000000;
+    color: #ffffff;
 }
 
 .wrapper h1{
+    colour:var(--main-color);
 font-size: 36px;
 text-align: center;
 }
-
 .wrapper .input-box{
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
-
 .input-box input{
     width: 100%;
     height: 100%;
@@ -74,18 +76,15 @@ text-align: center;
     color: #000000;
     padding: 20px 45px 20px 20px;
 }
-
 .input-box input::placeholder{
     color: #000000;
 }
-
 .input-box i{
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
-
 .wrapper .remember-forgot{
     display: flex;
     justify-content: space-between;
@@ -96,18 +95,16 @@ text-align: center;
     accent-color: #fff;
     margin-right: 3px;
 }
-
 .remember-forgot a:hover{
     text-decoration: underline;
 }
-
 .profile a{
     color: #000000;
 }
 
 .wrapper .btn {
     padding: 0.6rem 1rem; 
-    background: var(--green-color); 
+    background: var(--main-color); 
     color: #000000; 
     border: 0.5px solid rgb(0, 0, 0,.5);
     font-weight: 400;
@@ -122,7 +119,8 @@ text-align: center;
 
 .wrapper .btn .bx{
    padding: 4px;
-   background: var(--bg-color);
+   background: var(--main-color);
+   border: var(--secondary-color) solid 3px;
    color: var(--text-color);
    border-radius: 1rem;
    font-size: 20px;
@@ -130,7 +128,9 @@ text-align: center;
 }
 
 .wrapper .btn:hover {
-    background: var(--light-orange-color); 
+    background: var(--orange-color); 
+    border: var(--secondary-color) solid 0px;
+
     transition: 0.2s ease;
 }
 .wrapper .register-link{
@@ -138,16 +138,13 @@ text-align: center;
     text-align: center;
     margin-top: 20px;
 }
-
 .register-link p a{
     text-decoration: none;
     font-weight: 600;
 }
-
 .register-link p a:hover{
     text-decoration: underline;
 }
 .profile ii{
     font-size: 45px;
 }
-
